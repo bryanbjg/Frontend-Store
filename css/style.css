@@ -2,7 +2,7 @@
     --primary: #9c27b0;
     --darkPrimary: #89119D;
     --secundary: #FFCE00;
-    --darkSecondary: rgb(233,287,2);
+    --darkSecondary: rgb(233, 187, 2);
     --white: #FFF;
     --black: #000;
 
@@ -74,21 +74,127 @@ h3{
     margin: 3rem 0;
 }
 
+/* Navigation */
+
 .navigation{
  background-color: var(--darkPrimary);
  padding: 1rem 0;
  display: flex;
  justify-content: center;
- gap: 2rem;
-}
+ /* gap: 2rem;*/
+} 
 
 .navigation__link{
 
     font-family: var(--font);
     color: white;
     font-size: 2rem;
+    margin-right: 2rem;
 }
 
+.navigation__link:last-of-type{
+    margin-right: 0;
+}
+
+.navigation__link--active,
 .navigation__link:hover{
     color: var(--secundary);
 }
+
+/* Grid */
+.grid{
+    display: grid;
+    gap: 2rem;
+}
+
+/* Products */
+
+.product{
+ background-color: var(--darkPrimary);
+ padding: 1rem;
+}
+
+.product__image{
+    width: 100%;
+}
+
+.product__name{
+    font-size: 4rem;
+}
+
+.product__price{
+    font-size: 2.8rem;
+    color: var(--secundary);
+}
+
+.product__name,
+.product__price{
+    font-family: var(--font);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/*Graphic*/
+
+.graphic{
+    min-height: 30rem;
+    grid-column: 1 / 3;
+    background-repeat: repeat;
+    background-size: cover;
+
+}
+
+.graphic--tshirt{
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+    
+}
+
+.graphic--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+
+
+
+
+
+
+
+/* Footer */
+
+.footer{
+
+    background-color: var(--darkPrimary);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__text{
+    text-align: center;
+    font-family: var(--font);
+    font-size: 2.2rem;
+}
+
+
+
+
+
+
+/*Media*/
+
+
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(min-width: 768px){
+    .graphic--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
