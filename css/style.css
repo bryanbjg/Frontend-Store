@@ -158,6 +158,35 @@ h3{
 
 
 
+/*About us*/
+
+.about-us{
+    display: grid;
+}
+
+.about-us__image{
+    grid-row: 1 / 2;
+    width: 100%;
+}
+
+/*Bloks*/
+
+.blocks{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.block{
+    text-align: center;
+}
+
+.block__title{
+    margin: 0;
+}
+
+.block__image{
+    width: 100%;
+}
 
 
 
@@ -195,6 +224,26 @@ h3{
     .graphic--node{
         grid-row: 5 / 6;
         grid-column: 2 / 4;
+    }
+}
+
+@media(min-width: 768px){
+    .about-us{
+        grid-template-columns: repeat( 2 , 1fr);
+        column-gap: 2rem;
+    }
+}
+
+@media(min-width: 768px){
+    .about-us__image{
+        grid-column: 2 / 3;
+    }
+}
+
+@media(min-width: 768px){
+
+    .blocks{
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
